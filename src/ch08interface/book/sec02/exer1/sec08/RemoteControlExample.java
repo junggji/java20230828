@@ -1,4 +1,4 @@
-package ch08interface.book.sec02;
+package ch08interface.book.sec02.exer1.sec08;
 
 public class RemoteControlExample {
     public static void main(String[] args) {
