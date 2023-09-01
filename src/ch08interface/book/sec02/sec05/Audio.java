@@ -1,8 +1,7 @@
 package ch08interface.book.sec02.sec05;
 
 public class Audio implements RemoteControl {
-    private
-    int volume;
+    private int volume;
 
     @Override
     public void turnOn() {
