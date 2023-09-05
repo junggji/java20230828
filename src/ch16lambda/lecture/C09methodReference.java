@@ -8,7 +8,7 @@ public class C09methodReference {
         MyClass09 o2 = new MyClass09();
 
         MyInterface09 o3 = ((x, y) -> x.someMethod(y));
-        MyInterface09 o4 = MyClass09::someMethod;
+        MyInterface09 o4 = MyClass09::someMethod;   // MYClass09 는 x의 타입
     }
 }
 
