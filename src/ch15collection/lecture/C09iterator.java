@@ -12,16 +12,24 @@ public class C09iterator {
         set.add("css");
 
         Iterator<String> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            String item = iterator.next();
+            System.out.println("item = " + item);
+            iterator.remove();
+        }
 
+        System.out.println("set.size() = " + set.size());
 
-
-        /*for (String elem : set) {
-            System.out.println("elem = " + elem);
+        /*
+        for (String elem : set) {
             // 반복문 사용중 collection 의 아이템 삭제시
             // exception 발생 할 수 있음
-            if(elem.equals("css")) {
+            System.out.println("elem = " + elem);
+            if (elem.equals("css")) {
                 set.remove("css");
             }
-        }*/
+        }
+
+         */
     }
 }
