@@ -13,7 +13,7 @@ public class HashSetExample {
         set.add("JSP");
         set.add("Spring");
 
-        Iterator<String> iterator = set.iterator();
+        Iterator<String> iterator = set.iterator(); // 탐색메소드
         while(iterator.hasNext()) {
             String element = iterator.next();
             System.out.println(element);
