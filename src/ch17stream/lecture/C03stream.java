@@ -10,7 +10,7 @@ public class C03stream {
 
         stream.count();
 
-        // 최종연산이 끝난 stream을 재사용할 수음
+        // 최종연산이 끝난 stream을 재사용할 수 없음
 //        stream.count();
         Stream<String> stream2 = list.stream();
         stream2.count();

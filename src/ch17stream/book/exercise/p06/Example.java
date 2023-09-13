@@ -2,6 +2,8 @@ package ch17stream.book.exercise.p06;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.OptionalDouble;
+import java.util.stream.IntStream;
 
 public class Example {
     public static void main(String[] args) {
@@ -38,5 +40,27 @@ public class Example {
                 .map(x -> x.getAge())
                 .reduce(Integer.MAX_VALUE, Math::min);
         System.out.println(reduce2);
+
+        double avg = list.stream()
+                .map(x -> x.getAge())
+                .reduce(0,(x, y)->(x+y));
+
+        System.out.println(avg/3);
+
+        double average = list.stream()
+                .map(x -> x.getAge())
+                .mapToInt(Integer::intValue)
+                .average().orElse(0);
+
+        System.out.println(average);
+
+        double aver = list.stream()
+                .mapToInt(Member::getAge)
+                .average()
+                .getAsDouble();
+
+        System.out.println("aver = " + aver);
+
+
     }
 }
